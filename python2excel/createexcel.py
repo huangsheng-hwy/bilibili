@@ -1,8 +1,6 @@
 import xlwings
 
 
-
-
 # 创建excel表格
 def createExcel(excel_name):
     excelApp = xlwings.App(False, False)
@@ -10,7 +8,6 @@ def createExcel(excel_name):
     excelFile.save(excel_name)
     excelFile.close()
     excelApp.quit()
-
 
 
 # 给excel表格增加sheet
@@ -22,7 +19,8 @@ def addSheet(excel_name):
 
 
 if __name__ == '__main__':
-    for i in range(0,4):
+    # 生成4个excel文件
+    for i in range(0, 4):
         excel_name = "d:\\test\\{}.xlsx".format(i)
         createExcel(excel_name)
 
