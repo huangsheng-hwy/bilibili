@@ -23,8 +23,7 @@ if len(x):
         sht = wb.sheets[0]
         # 读取指定的单元格
         value = sht.range('b2').value
-        print(type(value))
-        # print(sht.range('b2').value,'--->',sht.range('c2').value)
+        # 退出系统打开的excel
         wb.app.quit()
 else:
     print('no related files')
