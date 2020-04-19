@@ -27,5 +27,6 @@ sheet = wb.sheets['Sheet1']
 sheet.range('A1').value = df
 # sheet.range('A1').options(pd.DataFrame,expand='table').value
 wb.save(path=file)
+# 没有close，会出现最后一个文件打开未关闭的问题
 wb.close()
 
