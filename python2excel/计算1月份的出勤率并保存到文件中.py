@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
-# @Time : 2020/4/19 21:17
-# @Author : python自动化办公社区
-# @File : read.py
+# @Time : 2020/4/25 23:39
+# @Author : 添加微信:hdylw1024
+# @File : 计算1月份的出勤率并保存到文件中.py
 # @Software: PyCharm
 # @Description:
-#               1、读取excel中的所有内容
-#               2、单个文件、文件夹下所有文件
+
 
 import glob
 import xlwings as xw
@@ -32,8 +31,22 @@ if len(x):
         print(day_list)
         num = day_list.count(200.0)
         come_rate = num/len(day_list)
-        name = sht.range('a2').value
-        print('{}-1月的出勤率是{}'.format(name,come_rate))
+
+        import pandas as pd
+
+        file = 'd:\\test\\res.xlsx'
+
+        df = pd.DataFrame([[come_rate, 0.6], [1, 1]],
+                          columns=['1', '2'],
+                          index=['小王', '小李'])
+        wb_write = xw.Book()
+        sheet = wb_write.sheets['Sheet1']
+        sheet.range('A1').value = df
+        # sheet.range('A1').options(pd.DataFrame,expand='table').value
+        wb_write.save(path=file)
+        # 没有close，会出现最后一个文件打开未关闭的问题
+        wb_write.close()
+
 
         # 退出系统打开的excel
         wb.app.quit()

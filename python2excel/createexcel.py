@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # 生成100个excel文件
     from _datetime import  datetime
     start = datetime.now()
-    for i in range(0, 100):
+    for i in range(1, 13):
         excel_name = "d:\\test\\{}.xlsx".format(i)
         createExcel(excel_name)
     end = datetime.now()  # 获取当前时间
