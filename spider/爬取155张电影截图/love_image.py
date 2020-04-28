@@ -5,13 +5,6 @@
 # @Software: PyCharm
 # @Description:
 
-# -*- coding: UTF-8 -*-
-# 公众号  ：数据TA说
-# 代码作者  ：看门大叔
-# 创建时间  ：  2020/3/11  21:48
-# 文件名称  :  spider.py
-# 开发工具  :  PyCharm
-
 
 import requests, re, os
 
