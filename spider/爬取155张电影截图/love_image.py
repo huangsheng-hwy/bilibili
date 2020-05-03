@@ -15,6 +15,7 @@ def crawl_love_image():
         url = "http://tieba.baidu.com/p/3108805355?pn={}".format(i)
         response = requests.get(url)
         html = response.text
+        # 取出代表图片的数据链接
         pattern = re.compile(
             r'<div.*?class="d_post_content j_d_post_content.*?">.*?<img class="BDE_Image" src="(.*?)".*?>.*?</div>',
             re.S)

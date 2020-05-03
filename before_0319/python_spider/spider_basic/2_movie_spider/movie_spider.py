@@ -14,7 +14,7 @@ def get_movie_resouce(movie):
     # 格式化获取的网站代码
     s = etree.HTML(data)
     # 通过@title获取他的title标签里面的内容
-    anchors = s.xpath('//*[@class="result-detail10993hhh"]//a')
+    anchors = s.xpath('//*[@class="statistical result-detail10993hhh"]//a')
     # 输出结构的换行符
     next_line = '\n'
     # 输出结果的格式
