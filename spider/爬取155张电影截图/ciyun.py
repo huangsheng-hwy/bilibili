@@ -20,7 +20,7 @@ def get_ciyun(content):
     abel_mask = np.array(Image.open('001.jpg'))  # 用于生成配色方案的图片，可以是任意图片，建议图片越清晰越好
     # 4. 生成词云
     wc = WordCloud(
-        background_color='pink',  # 背景颜色
+        background_color='black',  # 背景颜色
         font_path='simfang.ttf',  # 字体
         max_words=3000,  # 最大词数
         max_font_size=100,  # 显示字体最大值
