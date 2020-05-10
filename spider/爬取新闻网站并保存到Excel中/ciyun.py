@@ -20,7 +20,7 @@ def get_ciyun(content):
     abel_mask = np.array(Image.open('001.jpg'))  # 用于生成配色方案的图片，可以是任意图片，建议图片越清晰越好
     # 4. 生成词云
     wc = WordCloud(
-        background_color='white',  # 背景颜色
+        background_color='black',  # 背景颜色
         font_path='simfang.ttf',  # 字体
         max_words=3000,  # 最大词数
         max_font_size=100,  # 显示字体最大值
@@ -36,3 +36,20 @@ def get_ciyun(content):
     # 6. 展示词云
     img = Image.open('词云.png')
     img.show()
+
+
+get_ciyun('''文艺，电台，情感
+coding，技术极客
+有韧性、做事认真、随心
+声音好听、性格温柔、211研究生
+矮呆萌 
+闹腾，幽默，心中有正义
+爱折腾，爱成分表，爱美妆
+平凡 执着 奋进
+爱折腾，爱买买买，爱囤货
+慢性子，话不多，爱思考
+汉服  文学  绘画
+幽默，靠谱，三次传销经历[偷笑]
+乐观主义，有点努力，女博士
+乐观、务实、动力十足
+爱学习，肯努力，向上''')
