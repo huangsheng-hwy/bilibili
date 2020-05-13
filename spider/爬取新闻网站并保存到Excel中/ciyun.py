@@ -39,6 +39,7 @@ def get_ciyun(content):
 
 
 get_ciyun('''文艺，电台，情感
+
 coding，技术极客
 有韧性、做事认真、随心
 声音好听、性格温柔、211研究生
